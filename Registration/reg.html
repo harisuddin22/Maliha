@@ -5,25 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="reg.css">
+
 </head>
 <body>
 
     <a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" style="position: absolute; top: 1rem; left: 1rem;" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z"/></svg></a>    
-    <div class="form-container">
-        <form action="#">
-            <h1>Create Account</h1>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="password" placeholder="Password" required />
-            <input type="password" placeholder="Confirm Password" required />
-            <input type="text" placeholder="Phone Number" required />
-            <div class="form-group">
-                <input type="checkbox" id="terms">
-                <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+    <section class="signup-section">
+        <div class="container">
+            <div class="signup-content">
+                <h2>Sign Up</h2>
+                <form class="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" id="signup-name" name="signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email"> Email</label>
+                        <input type="email" id="signup-email" name="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password"> Password</label>
+                        <input type="password" id="signup-password" name="signup-password" required>
+                    </div>
+                    <button type="submit" class="signup-button">Sign Up</button>
+
+                    <a href="../Login/login.html">Already Have An Account? | Login</a>
+                </form>
             </div>
-            <button style="margin-bottom: 1rem;">Sign Up</button>
-            <a href="../Login/login.html">Already Have An Account?</a>
-        </form>
-    </div>
+        </div>
+    </section>
 </body>
 </html>
