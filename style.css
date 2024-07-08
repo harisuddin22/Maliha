@@ -812,6 +812,7 @@ h2 {
     background-color: #f4b400;
     color: #000;
     font-size: 1rem;
+    text-wrap: nowrap;
     text-transform: uppercase;
     border: none;
     border-radius: 5px;
