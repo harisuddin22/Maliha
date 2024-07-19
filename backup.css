@@ -1,0 +1,860 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family:custom;
+    src: url(Custom-font/lion_king.ttf);
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: aliceblue;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 11;
+    backdrop-filter: blur(50px);
+}
+
+.logo{
+    font-family: custom;
+    font-size: 2.5rem;
+    margin: 0;
+    margin: 0 3rem 0 1rem;
+    color: white;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.toggler-handler{
+    background-color: #f5b400;
+    border-radius: 0.3rem;
+}
+
+/* custom button css */
+
+.button-23 {
+    background-color: transparent;
+    border:none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 10px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: 10rem;
+    text-wrap: nowrap;
+    margin: 1rem;
+  }
+  
+  .button-23:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+  }
+  
+  .button-23:active {
+    opacity: 0.5;
+    transition: none;
+  }
+
+  /* Banner css start */
+
+/* .banner {
+    text-align: center;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.banner h1 {
+    font-size: 36px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 18px;
+    color: #555555;
+} */
+
+/* Banner Css Ends */
+
+
+
+/* @media (max-width: 960px){
+    .hero{
+        height: 36rem;
+    }
+} */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('landing/Background-images/bg2.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.text-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #f5b400;
+    color: #000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #d69b00;
+}
+
+.image-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.text-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #f4b400;
+    color: #000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #d69b00;
+}
+
+.image-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .image-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+
+/* Products CSS */
+
+.products-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    width: calc(33.33% - 20px);
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-details {
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f4b400;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #f4b400;
+    color: #000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d69b00;
+}
+
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+/* About Section CSS */
+
+
+.about-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    font-size: 2rem;
+    color: #f4b400;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.team {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-member {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.cta {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.cta h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #f4b400;
+    color: #000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #d69b00;
+}
+
+@media (max-width: 768px) {
+    .features,
+    .team-members {
+        flex-direction: column;
+    }
+
+    .feature,
+    .team-member {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+
+    .feature h3,
+    .team h3,
+    .cta h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Contact Us CSS */
+
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 45%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    padding: 15px 30px;
+    background-color: #f4b400;
+    color: #000;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #d69b00;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 45%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #f4b400;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    .contact-description {
+        font-size: 1rem;
+    }
+
+    .contact-info h3,
+    .submit-button {
+        font-size: 1.2rem;
+    }
+
+    .submit-button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+}
+
+
+/* News Section CSS */
+
+
+.news-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.news-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.news-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.news-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    flex: 1;
+    max-width: 30%;
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.news-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.read-more {
+    padding: 10px 20px;
+    background-color: #f4b400;
+    color: #000;
+    font-size: 1rem;
+    text-wrap: nowrap;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background-color: #d69b00;
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-item {
+        max-width: 100%;
+    }
+}
+
+/* Footer CSS */
+.bg-light {
+    background-color: #000000!important;
+  }
+  
+  .text-muted {
+    color: #6c757d!important;
+  }
+  
+  .text-reset {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .text-center {
+    text-align: center!important;
+  }
+  
+  .border-bottom {
+    border-bottom: 1px solid #dee2e6!important;
+  }
