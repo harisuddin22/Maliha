@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link
       rel="shortcut icon"
       href="Logos/pamela_8295528 (1).png"
@@ -26,6 +33,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+
+    <div id="cursor"><img src="assets/1.png" alt=""></div>
+
     <nav class="navbar">
         <a href="#" class="logo">Maliha</a>
         <ul class="nav-links">
@@ -40,7 +50,6 @@
           <span class="menu-icon"></span>
         </button>
     </nav>
-
     <section class="text-gray-600 body-font">
       <div
         class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
@@ -119,184 +128,81 @@
 
     <hr style="width: 100%; margin-top: 3rem;">
 
-    <section class="products-section">
-      <div class="products-container">
-        <div class="product-card">
-          <div class="product-image">
-            <img src="Product-images/Product-image.jpg" alt="Product 1" />
-          </div>
-          <div class="product-details">
-            <h3 class="product-name">Product Name 1</h3>
-            <p class="product-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
-              libero non odio ullamcorper.
-            </p>
-            <span class="product-price">$99.99</span>
-            <button class="btn btn-add-to-cart">Add to Cart</button>
-          </div>
+    <section id="modal">
+      <div class="container">
+        <div class="imgBx">
+            <img src="Product-images/Product-image.jpg" alt="">
         </div>
-
-        <!-- Add more product cards as needed -->
-      </div>
+        <div class="details">
+            <div class="content">
+                <h2>Jordan Proto-Lyte <br>
+                    <span>Running Collection</span>
+                </h2>
+                <p>
+                    Featuring soft foam cushioning and lightweight, woven fabric in the upper, the Jordan Proto-Lyte is
+                    made for all-day, bouncy comfort.
+                    Lightweight Breathability: Lightweight woven fabric with real or synthetic leather provides
+                    breathable support.
+                    Cushioned Comfort: A full-length foam midsole delivers lightweight, plush cushioning.
+                    Secure Traction: Exaggerated herringbone-pattern outsole offers traction on a variety of surfaces.
+                </p>
+                <p class="product-colors">Available Colors:
+                    <span id="black" onclick="active()" data-color-primary="#000" data-color-sec="#212121" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
+                    <span id="red" onclick="active()" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
+                    <span id="orange" onclick="active()" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
+                </p>
+                <h3>Rs. 12,800</h3>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </div>
     </section>
 
-
-    <footer class="text-center text-lg-start bg-light text-muted">
-      <!-- Section: Social media -->
-      <section
-        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-      >
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>Connect with us on social media:</span>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur urna ut orci condimentum, ut scelerisque nulla consectetur.</p>
+          <ul class="social-media">
+            <li><a href="#" class="social-icon fa fa-facebook"></a></li>
+            <li><a href="#" class="social-icon fa fa-twitter"></a></li>
+            <li><a href="#" class="social-icon fa fa-instagram"></a></li>
+            <li><a href="#" class="social-icon fa fa-youtube"></a></li>
+          </ul>
         </div>
-        <!-- Left -->
-
-        <!-- Right -->
-        <div>
-          <a href="#" class="me-4 text-reset">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="me-4 text-reset">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="me-4 text-reset">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="me-4 text-reset">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="#" class="me-4 text-reset">
-            <i class="fab fa-github"></i>
-          </a>
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
         </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-
-      <!-- Section: Links  -->
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>MalihA
-              </h6>
-              <p>
-                Where Brands Are Born - Your premier destination for brand
-                development.
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
-              <p>
-                <a href="#!" class="text-reset">Branding</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Design</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Marketing</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Consulting</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
-              <p>
-                <a href="#!" class="text-reset">About Us</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Services</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Contact</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">FAQ</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Contact details -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-              <p>
-                <i class="fas fa-home me-3"></i> Karachi, Postal Code-75600
-                Pakistan
-              </p>
-              <p>
-                <i class="fas fa-envelope me-3"></i>
-                malihagul@gmail.com
-              </p>
-              <p><i class="fas fa-phone me-3"></i> +92 309 99 99 907</p>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
-      </section>
-      <!-- Section: Links  -->
-
-      <!-- Section: Text -->
-      <section class="p-4 pt-0">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <p>
-              MalihA is dedicated to helping brands grow and succeed through
-              strategic branding and marketing solutions.
-            </p>
-          </div>
-
-          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <p>
-              Subscribe to our newsletter for the latest updates and insights.
-            </p>
-            <form>
-              <div class="input-group mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  aria-label="Your Email"
-                  aria-describedby="button-addon2"
-                />
-                <button
-                  class="btn btn-outline-secondary"
-                  type="button"
-                  id="button-addon2"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-          </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for the latest updates and offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
-      </section>
-      <!-- Section: Text -->
-
-      <!-- Section: Copyright -->
-      <div
-        class="text-center p-4"
-        style="background-color: rgba(0, 0, 0, 0.05)"
-      >
-        &copy; 2024 MalihA. All rights reserved.
       </div>
-      <!-- Section: Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 MalihA. All rights reserved.</p>
+      </div>
     </footer>
+    
 
     <script src="app.js"></script>
     <script
