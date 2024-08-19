@@ -45,10 +45,13 @@ $('.buy').click(function(){
 
 });
 
+//  Modal Show
 
-var cursor = document.getElementById("cursor");
+let card = document.getElementById("card");
+let modal = document.getElementById("modal");
+let modalImg = document.getElementById("modal-img");
 
-document.addEventListener("mousemove", (e)=>{
-    cursor.style.top = (e.pageY-cursor.offsetHeight/2+"px")
-    cursor.style.left = (e.pageX-cursor.offsetWidth/2+"px")
-})
+card.addEventListener("click", () => {
+    modalImg.src = card.querySelector("img").src; // Set the modal image to the card's image
+    modal.classList.add("show"); // Show the modal
+});
