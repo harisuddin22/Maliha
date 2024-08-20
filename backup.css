@@ -304,14 +304,9 @@ body{
     border-radius: 0%;
   }
 
-.show{
-    display: flex;
-    flex-direction: column;
-}
-
 #modal {
     position: absolute;
-    top: 1rem;
+    top: 15rem;
     z-index: 12;
     display: none; /* Hide by default */
     justify-content: center;
@@ -329,6 +324,7 @@ body{
     height: 600px;
     background: #ffffff;
     margin: 20px;
+    border: 1px solid black;
 }
 
 .show {
@@ -339,10 +335,11 @@ body{
 .container .imgBx {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
     height: 100%;
+    width: 40%;
     transition: .3s linear;
     border-radius: 0.5rem;
 }
@@ -360,11 +357,12 @@ body{
 
 .container .imgBx img {
     position: relative;
-    height:600px;
-    width: 600px;
+    height:599px;
+    width: 500px;
     object-fit: cover;
-    left: -50px;
+    left: -20px;
     transition: .9s linear;
+    border: 1px solid black;
 }
 
 .container .details {
